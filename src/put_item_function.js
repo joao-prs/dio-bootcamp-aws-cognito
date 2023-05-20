@@ -13,11 +13,10 @@ exports.handler = async (event) => {
         price: price
       }
     }
-    
     try {
         await dynamodb.put(params).promise();
         statusCode = 200;
-        responseBody = JSON.stringify('Item adicionado com sucesso!');  
+        responseBody = JSON.stringify('item adicionado com sucesso!');  
     } catch (err) {
         statusCode = 200;
         responseBody = JSON.stringify(err);
